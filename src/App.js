@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -22,16 +22,16 @@ const MainTitleText = styled.p`
 function App(props) {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <MainTitleText>@김민정 포트폴리오</MainTitleText>
       <Routes>
-        <Route index element={<MainPage />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/myinfo" element={<MyInfoPage />} />
         <Route path="/skill" element={<SkillPage />} />
         <Route path="/project" element={<ProjectPage />} />
       </Routes> 
       <NavigationButtons />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
