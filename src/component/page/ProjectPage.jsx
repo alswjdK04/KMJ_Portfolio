@@ -143,7 +143,7 @@ const ProjectPage = () => {
                   {project.images.map((img, i) => (
                     <img
                       key={i}
-                      src={img}
+                      src={process.env.PUBLIC_URL + img}
                       alt={`project-${index}-img-${i}`}
                       className={i === 1 ? "middle-image" : ""}
                     />
@@ -163,9 +163,9 @@ const ProjectPage = () => {
                       <FaGithub size="35" color="#333" />
                     </GithubIconButton >
                     {project.site && (
-                    <GoIconButton href={project.site} target="_blank" rel="noopener noreferrer">
-                      <FaExternalLinkAlt />
-                    </GoIconButton>
+                      <GoIconButton href={project.site} target="_blank" rel="noopener noreferrer">
+                        <FaExternalLinkAlt />
+                      </GoIconButton>
                     )}
                   </DescriptionBox>
                 </ProjectInfo>
